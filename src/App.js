@@ -9,9 +9,6 @@ import stationSelection from './assets/stationSelection.png'
 
 import sibPortrait from './assets/sibPortrait.png'
 import sibLandscape from './assets/sibLandscape.png'
-import sibDesktop from './assets/desktopScreen.png'
-
-import metaDesktop from './assets/metaDesktop.png'
 import metaLandscape from './assets/metaPortrait.png'
 import metaPortrait from './assets/metaProblem.png'
 
@@ -20,7 +17,7 @@ function App() {
   const [appCategory, setAppCategory] = useState('')
   const [app, setApp] = useState('')
   const [stack, setStack] = useState('')
-  const [nft, setNft] = useState(false)
+  
   
   // Color for active texts
   const styles = {
@@ -31,9 +28,13 @@ function App() {
     setInfoBox(boxName)
     setAppCategory('')
     setStack('')
+    setApp('')
   }
 
+ 
+
   return (
+    <>
     <div className="App">
       <div className="menuSection">
         <h1><a onClick={()=>handleInfoBox('')}>Hello, Arbus here!</a></h1>
@@ -70,24 +71,15 @@ function App() {
                     <>
                         <p className="businessDescription">SIB brings virtual space travel to your browser in 3D format.</p>
                         <p className="businessDescription"><span className="techStack">Tech-stack:</span> React, ThreeJS (WebGL), OSM </p>
-                        <p className="businessDescription"><span className="launches">Launches:</span> <a href="https://news.ycombinator.com/item?id=31204353" target='_blank'>HackerNews</a>, <a href="https://www.producthunt.com/products/spaceinbrowser" target='https://www.producthunt.com/products/spaceinbrowser'>ProductHunt</a> </p>
-                      <div className="screens">
-                        <a href="https://spaceinbrowser.com" target='_blank' title="Go to website"><img src={sibDesktop} className='desktopImgs'/></a>
-                        <a href="https://spaceinbrowser.com" target='_blank' title="Go to website"><img src={sibPortrait} className='nativeAppImgs'/></a>
-                        <a href="https://spaceinbrowser.com" target='_blank' title="Go to website"><img src={sibLandscape} className='nativeAppImgs'/></a>
-                      </div>
+                        <p className="businessDescription"><span className="launches">Launches:</span> <a href="https://news.ycombinator.com/item?id=31204353" target='_blank'>HackerNews</a>, <a href="https://www.producthunt.com/products/spaceinbrowser" target='https://www.producthunt.com/products/spaceinbrowser'>ProductHunt</a>, <a href="https://github.com/HashedGuy/SpaceInBrowser_stable" target='_blank'>GitHub</a> </p>
                     </> : ''}
                 
-                    <li><a onClick={()=>setApp('metavists')} target='_blank' style={app==='metavists' ? styles : {}}>Metavists</a></li>
+                    <li><a onClick={()=>setApp('metavists')} target='_blank' style={app==='metavists' ? styles : {}}>Metavists (in progress)</a></li>
                     {app==='metavists' ? 
                     <>
                         <p className="businessDescription">Metavists...coming soon.</p>
                         <p className="businessDescription"><span className="techStack">Tech-stack:</span> React</p>
-                        <div className="screens">
-                          <a href="https://metavists.netlify.app" target='_blank' title="Go to website"><img src={metaDesktop} className='desktopImgs'/></a>
-                          <a href="https://metavists.netlify.app" target='_blank' title="Go to website"><img src={metaPortrait} className='nativeAppImgs'/></a>
-                          <a href="https://metavists.netlify.app" target='_blank' title="Go to website"><img src={metaLandscape} className='nativeAppImgs'/></a>
-                        </div>
+                        
                     </> : ''}
                     <li><a onClick={()=>setApp('nft')} style={app==='nft' ? styles : {}}>NFT Land Map</a></li>
                     {app==='nft' ? 
@@ -105,13 +97,6 @@ function App() {
                     <>
                       <p className="businessDescription">LiveEasy is an indie business providing a self-storage service via its extended marketplace. The whole business is operated by me and my partner - Vanessa. You can book your storage either via the website or the app.</p>
                       <p className="businessDescription"><span className="techStack">Tech-stack:</span> React-Native, Firebase, GraphQL+Apollo</p>
-                    <div className="screens">
-                      
-                      <img src={homeScreen} className='nativeAppImgs'/>
-                      <img src={exploreScreen} className='nativeAppImgs'/>
-                      <img src={unitSelection} className='nativeAppImgs'/>
-                      <img src={stationSelection} className='nativeAppImgs'/>
-                    </div>
                     </> : ''}
              
                   </ul>
@@ -165,6 +150,35 @@ function App() {
         </div> 
       : ''}
     </div>
+   
+    {app ? 
+    <div className="screens">
+      {app==='sib' ? 
+      <>
+          <a href="https://spaceinbrowser.com" target='_blank' title="Go to website"><img src='https://ik.imagekit.io/74qyv5bswgr/desktopScreen_PH-lUK3iu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1657089716246' className='desktopImgs'/></a>
+                     
+          <a href="https://spaceinbrowser.com" target='_blank' title="Go to website"><img src={sibPortrait} className='nativeAppImgs'/></a>
+          <a href="https://spaceinbrowser.com" target='_blank' title="Go to website"><img src={sibLandscape} className='mobLandImg'/></a>
+      </> : 
+      app==='metavists' ? 
+    <>
+      <a href="https://metavists.netlify.app" target='_blank' title="Go to website"><img src='https://ik.imagekit.io/74qyv5bswgr/Sunset/metaDesktop_DoYU33eQO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1657090574359' className='desktopImgs'/></a>
+      
+      <a href="https://metavists.netlify.app" target='_blank' title="Go to website"><img src={metaPortrait} className='nativeAppImgs'/></a>
+      <a href="https://metavists.netlify.app" target='_blank' title="Go to website"><img src={metaLandscape} className='mobLandImg'/></a>
+    </>
+    : app==='liveEasy' ?
+    <>
+        <img src={homeScreen} className='nativeAppImgs'/>
+        <img src={exploreScreen} className='nativeAppImgs'/>
+        <img src={unitSelection} className='nativeAppImgs'/>
+        <img src={stationSelection} className='nativeAppImgs'/>
+    </> : ''}
+
+      
+    </div> : ''}
+  
+    </>
   );
 }
 

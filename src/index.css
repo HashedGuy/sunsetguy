@@ -13,6 +13,12 @@ code {
     monospace;
 }
 
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 .App {
   color: aliceblue;
   display: flex;
@@ -20,7 +26,6 @@ code {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
 }
 
 a {
@@ -83,11 +88,16 @@ li {
 }
 .desktopImgs {
   border-radius: 5px;
+  height: 25vh;
+  cursor: pointer;
+  transition: .2s all ease-in-out;
+}
+.mobLandImg {
   height: 20vh;
   cursor: pointer;
   transition: .2s all ease-in-out;
 }
-.nativeAppImgs:hover, .desktopImgs:hover {
+.nativeAppImgs:hover, .desktopImgs:hover, .mobLandImg:hover {
   transform: scale(1.1);
 }
 .businessDescription {
