@@ -79,6 +79,7 @@ function App() {
                     <>
                         <p className="businessDescription">Metavists...coming soon.</p>
                         <p className="businessDescription"><span className="techStack">Tech-stack:</span> React</p>
+                        <p className="businessDescription"><span className="techStack"><a href="https://metavists.netlify.app/">Demo version</a></span></p>
                         
                     </> : ''}
                     <li><a onClick={()=>setApp('nft')} style={app==='nft' ? styles : {}}>NFT Land Map</a></li>
@@ -151,32 +152,6 @@ function App() {
       : ''}
     </div>
    
-    {app ? 
-    <div className="screens">
-      {app==='sib' ? 
-      <>
-          <a href="https://spaceinbrowser.com" target='_blank' title="Go to website"><img src='https://ik.imagekit.io/74qyv5bswgr/desktopScreen_PH-lUK3iu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1657089716246' className='desktopImgs'/></a>
-                     
-          <a href="https://spaceinbrowser.com" target='_blank' title="Go to website"><img src={sibPortrait} className='nativeAppImgs'/></a>
-          <a href="https://spaceinbrowser.com" target='_blank' title="Go to website"><img src={sibLandscape} className='mobLandImg'/></a>
-      </> : 
-      app==='metavists' ? 
-    <>
-      <a href="https://metavists.netlify.app" target='_blank' title="Go to website"><img src='https://ik.imagekit.io/74qyv5bswgr/Sunset/metaDesktop_DoYU33eQO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1657090574359' className='desktopImgs'/></a>
-      
-      <a href="https://metavists.netlify.app" target='_blank' title="Go to website"><img src={metaPortrait} className='nativeAppImgs'/></a>
-      <a href="https://metavists.netlify.app" target='_blank' title="Go to website"><img src={metaLandscape} className='mobLandImg'/></a>
-    </>
-    : app==='liveEasy' ?
-    <>
-        <img src={homeScreen} className='nativeAppImgs'/>
-        <img src={exploreScreen} className='nativeAppImgs'/>
-        <img src={unitSelection} className='nativeAppImgs'/>
-        <img src={stationSelection} className='nativeAppImgs'/>
-    </> : ''}
-
-      
-    </div> : ''}
   
     </>
   );
