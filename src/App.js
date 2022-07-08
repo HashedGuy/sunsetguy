@@ -71,7 +71,8 @@ function App() {
                     <>
                         <p className="businessDescription">SIB brings virtual space travel to your browser in 3D format.</p>
                         <p className="businessDescription"><span className="techStack">Tech-stack:</span> React, ThreeJS (WebGL), OSM </p>
-                        <p className="businessDescription"><span className="launches">Launches:</span> <a href="https://news.ycombinator.com/item?id=31204353" target='_blank'>HackerNews</a>, <a href="https://www.producthunt.com/products/spaceinbrowser" target='https://www.producthunt.com/products/spaceinbrowser'>ProductHunt</a>, <a href="https://github.com/HashedGuy/SpaceInBrowser_stable" target='_blank'>GitHub</a> </p>
+                        <p className="businessDescription"><span className="launches">Launches:</span> <a href="https://news.ycombinator.com/item?id=31204353" target='_blank'>HackerNews</a>, <a href="https://www.producthunt.com/products/spaceinbrowser" target='_blank'>ProductHunt</a>, <a href="https://github.com/HashedGuy/SpaceInBrowser_stable" target='_blank'>GitHub</a> </p>
+                        <p className="businessDescription"><a className="website" href="https://spaceinbrowser.com" target='_blank'>spaceinbrowser.com</a></p>
                     </> : ''}
                 
                     <li><a onClick={()=>setApp('metavists')} target='_blank' style={app==='metavists' ? styles : {}}>Metavists (in progress)</a></li>
@@ -79,7 +80,7 @@ function App() {
                     <>
                         <p className="businessDescription">Metavists...coming soon.</p>
                         <p className="businessDescription"><span className="techStack">Tech-stack:</span> React</p>
-                        <p className="businessDescription"><span className="techStack"><a href="https://metavists.netlify.app/">Demo version</a></span></p>
+                        <p className="businessDescription"><span className="techStack"><a className="website" href="https://metavists.netlify.app/">Demo version</a></span></p>
                         
                     </> : ''}
                     <li><a onClick={()=>setApp('nft')} style={app==='nft' ? styles : {}}>NFT Land Map</a></li>

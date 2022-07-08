@@ -110,6 +110,12 @@ li {
 .launches {
   color: orange;
 }
+.website {
+  color: rgb(177, 230, 230) !important;
+}
+.website:hover {
+  color: aqua !important;
+}
 
 @media (min-width: 600px) {
   .App {
