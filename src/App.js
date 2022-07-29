@@ -75,12 +75,12 @@ function App() {
                         <p className="businessDescription"><a className="website" href="https://spaceinbrowser.com" target='_blank'>spaceinbrowser.com</a></p>
                     </> : ''}
                 
-                    <li><a onClick={()=>setApp('metavists')} target='_blank' style={app==='metavists' ? styles : {}}>Metavists (in progress)</a></li>
+                    <li><a onClick={()=>setApp('metavists')} target='_blank' style={app==='metavists' ? styles : {}}>Metavists</a></li>
                     {app==='metavists' ? 
                     <>
-                        <p className="businessDescription">Metavists...coming soon.</p>
+                        <p className="businessDescription">The Metavists is the world’s 1st social app for social impact that addresses multiple needs for the nonprofits.</p>
                         <p className="businessDescription"><span className="techStack">Tech-stack:</span> React</p>
-                        <p className="businessDescription"><span className="techStack"><a className="website" href="https://metavists.netlify.app/">Demo version</a></span></p>
+                        <p className="businessDescription"><a className="website" href="https://www.metavists.xyz/" target='_blank'>metavists.xyz</a></p>
                         
                     </> : ''}
                     <li><a onClick={()=>setApp('nft')} style={app==='nft' ? styles : {}}>NFT Land Map</a></li>
